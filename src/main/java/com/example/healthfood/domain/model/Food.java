@@ -36,9 +36,6 @@ public class Food {
     @Column(nullable = false)
     private double fats;
 }
-// a que se debe este error?
-// org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table food modify column id bigint not null auto_increment" via JDBC [Referencing column 'food_id' and referenced column 'id' in foreign key constraint 'orders_ibfk_2' are incompatible.]
-
 
 
 
