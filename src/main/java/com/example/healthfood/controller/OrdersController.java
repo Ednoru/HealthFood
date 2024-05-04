@@ -2,6 +2,7 @@ package com.example.healthfood.controller;
 
 import com.example.healthfood.application.service.OrdersService;
 import com.example.healthfood.domain.model.Orders;
+import com.example.healthfood.domain.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class OrdersController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Orders>> getOrdersByUserId(@PathVariable Long userId) {
+    public ResponseEntity<List<Orders>> getOrdersByUserId(@PathVariable User userId) {
         List<Orders> orders = ordersService.getOrdersByUserId(userId);
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }

@@ -1,6 +1,7 @@
 package com.example.healthfood.application.service;
 
 import com.example.healthfood.domain.model.Orders;
+import com.example.healthfood.domain.model.User;
 import com.example.healthfood.domain.repository.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class OrdersService {
         ordersRepository.deleteById(id);
     }
 
-    public List<Orders> getOrdersByUserId(Long userId) {
+    public List<Orders> getOrdersByUserId(User userId) {
         return ordersRepository.findByUserId(userId);
     }
 }
