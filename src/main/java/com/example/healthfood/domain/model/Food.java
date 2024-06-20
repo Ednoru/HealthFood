@@ -25,6 +25,9 @@ public class Food {
     private double price;
 
     @Column(nullable = false)
+    private String type;
+
+    @Column(nullable = false)
     private int calories;
 
     @Column(nullable = false)
@@ -35,6 +38,9 @@ public class Food {
 
     @Column(nullable = false)
     private double fats;
+
+    @Column(nullable = false)
+    private String image;
 }
 
 
