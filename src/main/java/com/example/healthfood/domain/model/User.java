@@ -34,4 +34,7 @@ public class User {
     @Column(nullable = false)
     private String phone_number;
 
+    @Column(nullable = false)
+    private String photo;
+
 }
