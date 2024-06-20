@@ -24,6 +24,10 @@ public class FoodService {
         return foodRepository.findById(id).orElse(null);
     }
 
+    public List<Food> getFoodByType(String type) {
+        return foodRepository.findByType(type);
+    }
+
     public Food addFood(Food food) {
         return foodRepository.save(food);
     }
