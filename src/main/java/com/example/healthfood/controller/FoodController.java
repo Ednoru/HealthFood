@@ -31,6 +31,12 @@ public class FoodController {
         return new ResponseEntity<>(food, HttpStatus.OK);
     }
 
+    @GetMapping("/type/{type}")
+    public ResponseEntity<List<Food>> getFoodByType(@PathVariable String type) {
+        List<Food> foods = foodService.getFoodByType(type);
+        return new ResponseEntity<>(foods, HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Food> saveFood(@RequestBody Food food) {
         Food savedFood = foodService.addFood(food);
