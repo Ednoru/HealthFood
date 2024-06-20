@@ -1,4 +1,4 @@
-package com.example.healthfood;
+package com.example.healthfood.controllers;
 
 import com.example.healthfood.application.service.UserService;
 import com.example.healthfood.controller.UserController;
